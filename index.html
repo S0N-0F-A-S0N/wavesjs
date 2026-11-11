@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Ocean Wave Simulation</title>
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -9,8 +11,9 @@
     </head>
 
     <body>
-        <div id="overlay"></div>
-        <div id="ui">
+        <main>
+        <div id="overlay" role="presentation"></div>
+        <div id="ui" aria-hidden="true">
             <div id="camera">
                 <canvas id="profile" width="350" height="105"></canvas>
                 <div id="length"></div>
@@ -28,12 +31,13 @@
                 <div id="choppiness-label">CHOPPINESS</div>
             </div>
         </div>
-        <canvas id="simulator"></canvas>
+        <canvas id="simulator" role="img" aria-label="Interactive 3D ocean wave simulation"></canvas>
 
-        <div id="error">Your browser does not appear to support the required technologies. You can still view this on <a href="http://youtu.be/IrUehq6vJss">YouTube</a>.</div>
+        <div id="error" role="alert" aria-live="polite">Your browser does not appear to support the required technologies. You can still view this on <a href="http://youtu.be/IrUehq6vJss">YouTube</a>.</div>
 
-        <div id="footer"><a href="http://david.li">David.Li</a> | <a href="http://youtu.be/IrUehq6vJss">Video</a></div>
+        <footer id="footer"><a href="http://david.li" aria-label="David.Li portfolio website">David.Li</a> | <a href="http://youtu.be/IrUehq6vJss" aria-label="Watch simulation video on YouTube">Video</a></footer>
 
+                </main>
         <script src="shared.js"></script>
         <script src="simulation.js"></script>
         <script src="ui.js"></script>
